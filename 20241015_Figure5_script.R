@@ -24,7 +24,7 @@ library(tidyr)
 
 ####
 #load the data
-setwd("C:/Users/aseuser/OneDrive - Nanyang Technological University/Postdoc2/Papers/APRIL_Aquatic/Version 10/Figure 3") #to be replaced by your own file sampling_plot
+setwd("...") #to be replaced by your own file sampling_plot
 data <- read.csv('Figure3_abcdefi.csv',header=TRUE, sep=",", dec=".")
 
 #Unit Conversion
@@ -458,7 +458,8 @@ c
 d <- plot_grid(ab,c, ncol = 2, rel_widths = c(1,2))
 d
 
-setwd("C:/Users/aseuser/OneDrive - Nanyang Technological University/Postdoc2/Papers/APRIL_Aquatic/Version 10/Figure 5")
+#Offload the graph
+setwd("...")  #to be replaced by your own file sampling_plot
 tiff(("20241015_Figure5.tiff"), height = 18, width = 27, units = 'cm', compression = "lzw", res = 600)
 d
 dev.off()
