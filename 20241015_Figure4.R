@@ -29,7 +29,7 @@ library(ggpubr)
 library(coin)
 
 
-setwd("C:/Users/aseuser/OneDrive - Nanyang Technological University/Postdoc2/Papers/APRIL_Aquatic/Version 10/Figure 4") #to be replaced by your own file location
+setwd("...") #to be replaced by your own file location
 data<- read.csv('Figure4.csv',header=TRUE, sep=",", dec=".",skip=2)
 
 data$DOC_conc_mean_median_mg.L.1<-ifelse(is.na(data$DOC_conc_mean_mg.L.1),data$DOC_conc_median_mg.L.1,data$DOC_conc_mean_mg.L.1)
@@ -287,7 +287,7 @@ i<-ggboxplot(sub_data,x = "Aquatic.component_edit" , y ="Co2CH4",outlier.shape =
 print(i)
 
 # Arrange the plots with ggarrange
-setwd("C:/Users/aseuser/OneDrive - Nanyang Technological University/Postdoc2/Papers/APRIL_Aquatic/Version 10/Figure 4")
+setwd("...") #to be replaced by your own file location
 tiff(("20241015_Figure4.tiff"), height = 25, width = 25, units = 'cm', compression = "lzw", res = 600)
 ggarrange(a,b,c,d,e,f,g,h,i,ncol = 3, nrow = 3,heights = c(1, 1, 1, 1.2), widths = c(1, 1, 1.1),align="v",common.legend = F)
 dev.off()
