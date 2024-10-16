@@ -28,7 +28,7 @@ library(coin)
 
 
 #load the data
-setwd("C:/Users/aseuser/OneDrive - Nanyang Technological University/Postdoc2/Papers/APRIL_Aquatic/Version 10/Figure 3") #to be replaced by your own file location
+setwd("...") #to be replaced by your own file location
 data <- read.csv('Figure3_abcdefi.csv',header=TRUE, sep=",", dec=".")
 
 #Unit Conversion
@@ -286,7 +286,7 @@ h<- ggplot(data_summary_CO2, aes(x = Site, y = mean_F14C, fill = Site)) +
 print(h)
 
 #Offload the figure
-setwd("C:/Users/aseuser/OneDrive - Nanyang Technological University/Postdoc2/Papers/APRIL_Aquatic/Version 10/Figure 3")
+setwd("...")  #to be replaced by your own file location
 tiff(("20241015_Figure3.tiff"), height = 25, width = 25, units = 'cm', compression = "lzw", res = 600)
 ggarrange(a,b,c,d,e,f,g,h,i,ncol = 3, nrow = 3,heights = c(1, 1, 1, 1.2),align="v",common.legend = F)
 dev.off()
