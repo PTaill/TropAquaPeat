@@ -29,10 +29,9 @@ library(coin)
 
 #load the data
 setwd("...") #to be replaced by your own file location
-data <- read.csv('Figure3_abcdefi.csv',header=TRUE, sep=",", dec=".")
+data <- read.csv('Figure3_abcdefi_Figure5.csv',header=TRUE, sep=",", dec=".")
 
 #Unit Conversion
-data$DOC_mgCL<-data$DOC_mgCL*0.9 #DOC samples were analyzed without being acidified which leads to a DOC overestimation of approxametively 10% which is corrected using this line. You can refer to the manuscript methods section and Figure S2 for further information 
 data$water_temp_K <-data$temperature_water_degC  + 273.15
 data$Sol_CO2 <- exp(-58.0931+(90.5069*(100/data$water_temp_K))+(22.294*(log(data$water_temp_K/100)))) # in [mol L-1 atm-1]; according to Weiss, 1974 (in Goldenfum, 2010)
 data$Sol_CH4 <- exp(-115.6477+(155.5756/(data$water_temp_K/100))+65.2553*(log(data$water_temp_K/100))-(6.1698*(data$water_temp_K/100)))*(1000/18.0153) # in [mol L-1 atm-1]; according to Lide, 2007 (in Goldenfum, 2010)
@@ -45,6 +44,7 @@ data$CO2_mgCL<-data$water_CO2_umolL*12.0107/1000
 data$CH4_mgCL<-data$water_CH4_umolL*12.0107/1000
 data$CH4_ugCL<-data$CH4_mgCL*1000
 data$CO2CH4<-data$CO2_mgCL/data$CH4_mgCL
+data$DOC_mgCL<-data$DOC_mgCL*0.9 #DOC samples were analyzed without being acidified which leads to a DOC overestimation of approxametively 10% which is corrected using this line. You can refer to the manuscript methods section and Figure S2 for further information 
 data$sampling_site_edit<-(ifelse(data$sampling_site=="CANIN","Canal",ifelse(data$sampling_site=="CAN80","Ditch",
                                                                             ifelse(data$sampling_site=="CANMID","Ditch",
                                                                                    ifelse(data$sampling_site=="CAN60","Ditch",
