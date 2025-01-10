@@ -1,6 +1,6 @@
 # TropAquaPeat
 ## Overview
-R scripts, data and outputs repository for the submitted manuscript "Aquatic Carbon Greenhouse Gas Production and Emission Pathways in a Tropical Peatland Plantation Forest"
+R scripts, data and outputs repository for the submitted manuscript "Methane and Carbon Dioxide Production and Emission Pathways in the Belowground and Draining Water Bodies of a Tropical Peatland Plantation Forest"
 
 ## Project Structure
 - `data/`: Contains input datasets
@@ -28,7 +28,7 @@ Figures: Located in outputs/figures/
 
 ## Citation
 If you use these scripts or data in your work, please cite:
-Taillardat, Moore, Sasmito, Evans, Alfina, Lok, Bandla, Cahya, Deshmukh, Dubey, Kurnianto, Swarup, Tarigan, Taufik, Lupascu, Taylor (2024). "Aquatic Carbon Greenhouse Gas Production and Emission Pathways in a Tropical Peatland Plantation Forest" Geophysical Research Letters (Submitted)
+Taillardat, Moore, Sasmito, Evans, Alfina, Lok, Bandla, Cahya, Deshmukh, Dubey, Kurnianto, Swarup, Tarigan, Taufik, Lupascu, Taylor (2025). "Methane and Carbon Dioxide Production and Emission Pathways in the Belowground and Draining Water Bodies of a Tropical Peatland Plantation Forest" Geophysical Research Letters (Submitted)
 
 ## Contact Information
 For any questions or issues, please contact:
